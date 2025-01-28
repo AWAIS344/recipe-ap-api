@@ -31,6 +31,13 @@ jobs:
   test-lint:
     runs-on: ubuntu-20.04
     steps:
+      - name: List Directory Contents
+        run: ls -la
+      - name: Display Python Version
+        run: python --version
+      - name: Display Environment Variables
+        run: env
+
       - name: Checkout Code
         uses: actions/checkout@v2
 
