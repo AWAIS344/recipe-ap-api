@@ -23,38 +23,3 @@ jobs:
         run: |
           docker compose run --rm app sh -c "flake8"
 
-# name: Test and Lint
-
-# on: [push]
-
-# jobs:
-#   test-lint:
-#     runs-on: ubuntu-20.04
-#     steps:
-#       - name: List Directory Contents
-#         run: ls -la
-#       - name: Display Python Version
-#         run: python --version
-#       - name: Display Environment Variables
-#         run: env
-
-#       - name: Checkout Code
-#         uses: actions/checkout@v2
-
-#       - name: Docker Login
-#         uses: docker/login-action@v1
-#         with:
-#           username: ${{ secrets.DOCKERHUB_USER }}
-#           password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-#       - name: Build Docker Container
-#         run: docker-compose build
-
-#       - name: Run Tests
-#         run: docker-compose run --rm app sh -c "python manage.py test"
-
-#       - name: Run Lint
-#         run: docker-compose run --rm app sh -c "flake8"
-
-#       - name: Clean Up Docker
-#         run: docker-compose down
