@@ -3,7 +3,7 @@ Simple Add function
 """
 
 def add(x, y):
-    """Add two numbers together"""
+    """Add two numbers"""
     return x + y
 
 def subtract(x, y):
